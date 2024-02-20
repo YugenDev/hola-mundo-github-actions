@@ -1,0 +1,21 @@
+name: hola-mundo-Script
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up python 3.12
+      uses: actions/setup@python.v3
+      with:
+        python-version: "3.12"
+
+    - name: script-runing
+      run: python main.py
+      
+
+  
